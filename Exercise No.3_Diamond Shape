@@ -1,4 +1,4 @@
-#Diamond Shape
+# Diamond Shape
 
 # Prompt the user to enter an odd integer
 num = int(input("Enter an odd integer: "))
