@@ -1,0 +1,16 @@
+#Diamond Shape
+
+# Prompt the user to enter an odd integer
+num = int(input("Enter an odd integer: "))
+
+# Verify if the entered number is odd
+if num % 2 == 0:
+    print("We request you to provide an odd integer.")
+else:
+    # Show the upper portion of the diamond
+    for i in range((num // 2) + 1):
+        print(' ' * (num // 2 - i) + '*' * (2 * i + 1))
+    
+    # Show the lower portion of the diamond
+    for i in range((num // 2) - 1, -1, -1):
+        print(' ' * (num // 2 - i) + '*' * (2 * i + 1))
