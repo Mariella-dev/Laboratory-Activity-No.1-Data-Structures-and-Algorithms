@@ -1,0 +1,34 @@
+# Ohm's Law 
+
+# Inquire which value the user wants to compute.
+choice = input("Select what you'd like to calculate (V, I, or R): ").lower()
+
+if choice == 'v':
+    # Obtain the values for current and resistance.
+    I = float(input("Enter current (I) in Amperes: "))
+    R = float(input("Enter resistance (R) in Ohms: "))
+    V = I * R  
+    print(f" The Voltage (V) = {V} Volts")
+
+elif choice == 'i':
+    # Obtain the values for voltage and resistance.
+    V = float(input("Enter voltage (V) in Volts: "))
+    R = float(input("Enter resistance (R) in Ohms: "))
+    if R == 0:
+        print("Error: Resistance can't be zero!")
+    else:
+        I = V / R  
+        print(f" The Current (I) = {I} Amperes")
+
+elif choice == 'r':
+    # Obtain the values for voltage and current.
+    V = float(input("Enter voltage (V) in Volts: "))
+    I = float(input("Enter current (I) in Amperes: "))
+    if I == 0:
+        print("Error: Current can't be zero!")
+    else:
+        R = V / I  
+        print(f"The Resistance (R) = {R} Ohms")
+
+else:
+    print("Unrecognized choice! Select V, I, or R.")
